@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<div class="jumbotron">
+  <div class="container">
+    <div class="center">
+      <a href="/"><img alt="Brand" src="//static.kogan.com/static/img/kogan-logo.eac8023e4ee1.png"></a>
+      <h2>The easiest way to find the Average Cubic Weight (kg) per category</h2>
+    </div>
+  </div>
+</div>
+
+<div class="container filter">
+  <div class="center">
+    <div class="filter">
+      <div class="form-group">
+        <%= form_tag items_path, method: :get do %>
+          <%= label_tag "Search Category" %>
+          <%= select_tag("category", options_from_collection_for_select(@items.all.to_a.uniq{ |o| o.category}, :category, :category, params[:category]),
+                        { include_blank: true, class: 'form-control' }) %>
+          <%= submit_tag "Search", name: nil, class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="center">
+    <h3 class="cubic-weight">Average Cubic Weight: <%= number_with_precision(@average_cubic_weight, precision: 2) %> kg</h3>
+  </div>
+</div>

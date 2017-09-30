@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: MyString
+  title: MyString
+  width: 9.99
+  length: 9.99
+  height: 9.99
+  cubic_weight: 9.99
+
+two:
+  category: MyString
+  title: MyString
+  width: 9.99
+  length: 9.99
+  height: 9.99
+  cubic_weight: 9.99

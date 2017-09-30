@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @item.category %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @item.title %>
+</p>
+
+<p>
+  <strong>Width:</strong>
+  <%= @item.width %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @item.length %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @item.height %>
+</p>
+
+<p>
+  <strong>Cubic weight:</strong>
+  <%= @item.cubic_weight %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>

@@ -1,0 +1,36 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background-color: white;
+  h1, h2 {
+    color: grey;
+  }
+}
+
+h3 {
+  color: red;
+  border-style: solid;
+  border-color: grey;
+  padding: 5px;
+}
+
+.form-group {
+  margin-top: 15px;
+}
+.btn {
+  margin-top: 15px;
+}
+
+.filter {
+  background-color: 	#F5F5F5;
+}
+
+.table {
+  margin-top: 15px;
+}

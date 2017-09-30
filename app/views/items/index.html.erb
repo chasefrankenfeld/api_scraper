@@ -1,0 +1,48 @@
+<%= render 'heading' %>
+
+<div class="container">
+<table class="table table-hover table-condensed">
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Title</th>
+      <th>Width</th>
+      <th>Length</th>
+      <th>Height</th>
+      <th>Cubic Weight</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td><%= item.category %></td>
+        <td><%= item.title %></td>
+        <% if item.width %>
+          <td><%= number_with_precision(item.width, precision: 1) %> cm</td>
+        <% else %>
+          <td>n/a</td>
+        <% end %>
+        <% if item.length %>
+          <td><%= number_with_precision(item.length, precision: 1) %> cm</td>
+        <% else %>
+          <td>n/a</td>
+        <% end %>
+        <% if item.height %>
+          <td><%= number_with_precision(item.height, precision: 1) %> cm</td>
+        <% else %>
+          <td>n/a</td>
+        <% end %>
+        <% if item.cubic_weight %>
+          <td><%= number_with_precision(item.cubic_weight, precision: 2) %> kg</td>
+        <% else %>
+          <td>n/a</td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
